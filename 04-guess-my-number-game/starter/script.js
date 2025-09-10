@@ -36,7 +36,7 @@ document.querySelector(`.check`).addEventListener(`click`, function () {
   const guess = Number(document.querySelector(`.guess`).value);
   console.log('Player guessed:', guess);
 
-  if (!guess && guess !== 0) {
+  if (!guess) {
     document.querySelector(`.message`).textContent = `Please input a number!`;
     return;
   }
