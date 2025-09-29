@@ -25,6 +25,8 @@ const diceEl = document.querySelector('.dice');
 
 const btnRoll = document.querySelector('.btn--roll');
 
+const btnHold = document.querySelector('.btn--hold');
+
 // game initialization function
 const init = function () {
   // start with both players having zero total score
@@ -66,9 +68,36 @@ btnRoll.addEventListener('click', function () {
         currentScore;
     } else {
       // handle rollin a 1
-      currentScore = 0;
+      switchPlayer();
+      consoole.log(`Active player: `, activePlayer);
 
-      document.getElementById(`current--${activePlayer}`).textContent = 0;
+      console.log(
+        `Player 0 active: `,
+        player0El.classList.contains('player---active')
+      );
+      console.log(
+        `Player 1 active: `,
+        player1El.classList.contains('player---active')
+      );
     }
+  }
+});
+
+const switchPlayer = function () {
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  currentScore = 0;
+
+  activePlayer = activePlayer === 0 ? 1 : 0;
+
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+};
+
+btnHold.addEventListener('click', function () {
+  if (playing && currentScore > 0) {
+    scores[activePlayer] += currentScore;
+    document.getElementById(`score--${activePlayer}`).textContent =
+      scores[activePlayer];
+    switchPlayer();
   }
 });
