@@ -105,44 +105,44 @@
 // functionTypes.arrowFunction('test');
 // functionTypes.modernFunction('modern', 'approach');
 
-// let age = 30;
+let age = 30;
 
-// let oldAge = age;
+let oldAge = age;
 
-// age = 31;
+age = 31;
 
-// console.log(`age`, age);
-// console.log(`oldAge`, oldAge);
+console.log(`age`, age);
+console.log(`oldAge`, oldAge);
 
-// const me = {
-//   name: 'Chester',
-//   age: 22,
-// };
+const me = {
+  name: 'Chester',
+  age: 22,
+};
 
-// const friend = me;
-// friend.name = 'Ellica';
-// friend.age = 21;
+const friend = me;
+friend.name = 'Ellica';
+friend.age = 21;
 
-// console.log(`me`, me);
-// console.log(`friend`, friend);
+console.log(`me`, me);
+console.log(`friend`, friend);
 
-// const orignal = {
-//   name: 'Jesse',
-//   age: 24,
-//   hobbies: ['reading', 'coding'],
-// };
+const orignal = {
+  name: 'Jesse',
+  age: 24,
+  hobbies: ['reading', 'coding'],
+};
 
-// const shallowCopy = { ...orignal };
+const shallowCopy = { ...orignal };
 
-// shallowCopy.name = 'Bob';
+shallowCopy.name = 'Bob';
 
-// console.log(`orignal name:`, orignal);
-// console.log(`copy name:`, shallowCopy);
+console.log(`orignal name:`, orignal);
+console.log(`copy name:`, shallowCopy);
 
-// shallowCopy.hobbies.push('basketball');
+shallowCopy.hobbies.push('basketball');
 
-// console.log(`orignal hobbies:`, orignal);
-// console.log(`copy hobbies:`, shallowCopy);
+console.log(`orignal hobbies:`, orignal);
+console.log(`copy hobbies:`, shallowCopy);
 
 const deepOrignal = {
   name: 'Charlie',
